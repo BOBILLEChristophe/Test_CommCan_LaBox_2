@@ -18,8 +18,12 @@
 
 #include "CanMsg.h"
 
-gpio_num_t CanMsg::RxPin = GPIO_NUM_22;               // Optional, default Rx pin is GPIO_NUM_4
-gpio_num_t CanMsg::TxPin = GPIO_NUM_23;               // Optional, default Tx pin is GPIO_NUM_5
+gpio_num_t CanMsg::RxPin = GPIO_NUM_4;               // Optional, default Rx pin is GPIO_NUM_4
+gpio_num_t CanMsg::TxPin = GPIO_NUM_5;               // Optional, default Tx pin is GPIO_NUM_5
+
+// gpio_num_t CanMsg::RxPin = GPIO_NUM_22;               // Optional, default Rx pin is GPIO_NUM_4
+// gpio_num_t CanMsg::TxPin = GPIO_NUM_23;               // Optional, default Tx pin is GPIO_NUM_5
+
 uint32_t CanMsg::DESIRED_BIT_RATE = 1000UL * 1000UL;  // 1 Mb/s;
 
 void CanMsg::setup() {
