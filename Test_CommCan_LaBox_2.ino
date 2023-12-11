@@ -92,7 +92,7 @@ void setup() {
   Serial.begin(115200);
   CanMsg::setup();
 
-  loco->address = 22,
+  loco->address = 65;
 
   xTaskCreatePinnedToCore(&recepCan, "recepCan", 2 * 1024, NULL, 5, NULL, 0);
 }
@@ -122,7 +122,12 @@ void loop() {
   // Active les feux et le bruit de la locomotive
   laBox.toggleFunction(loco, 0);
   laBox.toggleFunction(loco, 1);
-  delay(10);
+  delay(1000);
+
+  // Programmation de CV POM
+  // WRITE CV on MAIN   <CAB CV VALUE>
+  laBox.writeCVByteMain(loco, 63, 75);
+  delay(100);
 
   // Avant 25
   loco->speed = 25;
