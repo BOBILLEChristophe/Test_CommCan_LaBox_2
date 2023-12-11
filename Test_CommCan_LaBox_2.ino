@@ -11,7 +11,12 @@
   v 0.5.2 - 09/12/23
   v 0.5.3 - 10/12/23
   v 0.5.4 - 10/12/23 : Add POWERMODE::OVERLOAD
-  v 0.6.0 - 10/12/23 : Presentation en classes et méthodes
+  /*******************************************************************************************************
+  v 0.6.0 - 11/12/23 : Presentation en classes et méthodes 
+                       Adoption d'un nouveau format de messages totalement incompatible avec les anciens
+  v 0.6.1 - 11/12/23 : Ajout du retour d'informations
+                       Ajouts de commandes dont la POM  case 0xF7:
+                                                        // WRITE CV on MAIN <w CAB CV VALUE>
 */
 
 #ifndef ARDUINO_ARCH_ESP32
