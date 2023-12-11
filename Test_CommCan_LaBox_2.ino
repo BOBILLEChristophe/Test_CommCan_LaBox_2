@@ -64,7 +64,7 @@ void recepCan(void *pvParameter) {
             break;
           case 0xFE:
             if (resp) {
-              Serial.printf("\nConfirmation pour mise sous tension : \n", frameIn.data[0] ? "<1>" : "<0>");
+              Serial.printf("\nConfirmation tension : %s\n", frameIn.data[0] ? "<1>" : "<0>");
             }
             break;
           case 0xFF:
