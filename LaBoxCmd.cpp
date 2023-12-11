@@ -66,3 +66,10 @@ bool LaBoxCmd::emergency() {
   CanMsg::sendMsg(0, cmde, resp);
   return true;
 }
+
+bool LaBoxCmd::writeCVByteMain(Loco *loco, byte CV, byte value) {
+  const byte cmde = 0xF7;
+  const byte resp = 0x00;
+  CanMsg::sendMsg(0, cmde, resp, loco->address & 0xFF00, loco->address & 0x00FF, CV, value);
+  return true;
+}
