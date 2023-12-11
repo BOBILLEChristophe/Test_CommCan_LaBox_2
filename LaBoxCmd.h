@@ -42,6 +42,7 @@ public:
     bool setFunction(Loco *, byte);
     bool toggleFunction(Loco *, byte);
     bool emergency();
+    bool writeCVByteMain(Loco *, byte, byte);
 };
 
 #endif
